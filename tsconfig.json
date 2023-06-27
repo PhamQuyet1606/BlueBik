@@ -1,3 +1,22 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json"
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "module": "es6",
+    "moduleResolution": "node",
+    "baseUrl": ".",
+    "paths": {
+        // "src/*" : ["./src/*"],// alias similar to defined in .babelrc
+        "assets/*":["./src/assets/*"],
+        "navigation/*":["./src/navigation/*"],
+        "modules/*":["./src/modules/*"],
+        "components/*":["./src/components/*"],
+    },
+    "sourceMap": true,
+    "target": "ES6"
+},
 }
